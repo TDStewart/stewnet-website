@@ -38,7 +38,7 @@ The source says both “to return to peaceful mode, /peaceful” and that `/peac
 
 Console DNS addresses and compatible featured-server names were checked against https://github.com/Pugmatt/BedrockConnect on October 20, 2026. They match the supplied guide. The guide's third-party service caveat, troubleshooting link, and Automatic DNS restore instruction are retained. Minecraft server and map availability were not asserted or tested.
 
-The previous design conversation returned message placeholders and two GitHub screenshots, so no exact prior visual mockup was recoverable. This implementation follows the user's explicit approved direction: dark obsidian, dirt, grass, a Creeper, and a contrasting white sheep. The two SVG illustrations are original simple pixel art, stored locally. No tracking or analytics is included.
+Visual revision: the user subsequently supplied “Stewart Family Minecraft Server Guide.png”, the original design reference. The homepage now follows its cinematic forest banner, grass-and-stone title, private-family panel, four shortcuts, and Java/Bedrock/map cards. Shared pages use textured stone/dirt panels and grass edging. The six requested pages are retained. The illustrated scenery is decorative and is not a screenshot of the actual server or live map. No tracking or analytics is included.
 
 ## Editing
 
@@ -48,3 +48,13 @@ The previous design conversation returned message placeholders and two GitHub sc
 - Six `.html` files: complete standalone page content, navigation, and the exact shared footer.
 
 Keep repeated guide sections and the shared navigation/footer in sync when editing. Preserve conditional claims such as “if enabled,” “once enabled,” and “should.”
+
+## Banner artwork
+
+`assets/family-hero.webp` was created with the built-in image-generation tool using the user-supplied mockup as its reference, then encoded as WebP for the website. The unused standalone SVG sheep remains available in assets, but the homepage now uses the sheep in the banner.
+
+Generation prompt:
+
+> Use case: precise-object-edit. Create a wide website hero banner adapted from the provided reference. Preserve the reference's exact Minecraft voxel forest at dusk, warm lanterns, lake and house scenery, green Creeper at left and recognizable cubic white Minecraft sheep at right. Preserve the central two-line block title exactly: 'STEWART FAMILY' in grass-over-dirt 3D block letters and 'MINECRAFT SERVER' in pale stone 3D block letters. Below the title keep the small tagline 'BUILD • EXPLORE • SURVIVE • TOGETHER'. Remove ALL navigation bars, panels, cards, address boxes, UI buttons, private-server notice and lower website interface. This output is just a cinematic landscape hero artwork with the title and characters, to be placed above real HTML content. Frame the complete title and both characters without clipping, leave modest breathing room; wide landscape composition approximately 3:1. No other text. Match reference faithfully, not a redesign.
+
+Revision validation: all internal files, anchors, navigation links, and exact shared footers passed checks. Full rendered guide wording matches the original after removing Markdown formatting. Banner artwork was visually inspected. A browser preview of this revision could not be run because local server sockets are restricted in this session; responsive CSS is provided but this revision has not been visually checked in a browser.

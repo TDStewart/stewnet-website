@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" shape-rendering="crispEdges"><title>White sheep</title><path fill="#a89c8d" d="M20 72h16v40H20zM76 72h16v40H76z"/><path fill="#534b48" d="M20 100h16v12H20zM76 100h16v12H76z"/><path fill="#f7f6e9" d="M8 24h72v56H8zM16 16h56v8H16zM80 24h24v48H80z"/><path fill="#dbdacc" d="M8 64h72v16H8zM64 24h16v40H64zM16 32h8v8h-8zM32 16h8v8h-8zM40 56h16v8H40zM8 48h8v8H8zM88 24h16v8H88z"/><path fill="#b2a395" d="M72 32h32v32H72z"/><path fill="#eeeadd" d="M64 24h8v24h-8zM104 24h8v24h-8z"/><path fill="#29272d" d="M72 40h8v8h-8zM96 40h8v8h-8z"/><path fill="#d0a8a3" d="M80 56h16v8H80z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" shape-rendering="crispEdges" role="img" aria-labelledby="title">
+<title id="title">Blocky white Minecraft-style sheep</title>
+<!-- Four square legs, with the far pair in shade. -->
+<path fill="#81796b" d="M43 100h14v36H43zM107 100h14v36h-14z"/>
+<path fill="#524c43" d="M43 128h14v8H43zM107 128h14v8h-14z"/>
+<path fill="#b6ab94" d="M25 111h16v37H25zM89 111h16v37H89z"/>
+<path fill="#756d5e" d="M35 111h6v37h-6zM99 111h6v37h-6z"/>
+<path fill="#625a4c" d="M25 140h16v8H25zM89 140h16v8H89z"/>
+<!-- Long cuboid wool body: top, lit side, shaded end. -->
+<path fill="#fffdf1" d="m15 56 29-18h76l-29 18z"/>
+<path fill="#eeede2" d="M15 56h76v59H15z"/>
+<path fill="#c9cbbf" d="m91 56 29-18v59l-29 18z"/>
+<!-- Small square wool tufts. -->
+<path fill="#e1e2d5" d="M15 64h9v15h-9zM33 56h15v7H33zM48 80h12v8H48zM72 63h19v9H72zM23 99h18v8H23zM62 106h29v9H62z"/>
+<path fill="#f9f8ee" d="M24 79h15v12H24zM56 65h10v9H56zM42 98h12v10H42z"/>
+<path fill="#b9bdae" d="m99 70 10-6v10l-10 6zM110 87l10-6v10l-10 6z"/>
+<!-- Wool-capped, cubic head projecting from the front of the body. -->
+<path fill="#fffdf3" d="m86 52 17-11h36l-17 11z"/>
+<path fill="#e8e9df" d="M86 52h36v44H86z"/>
+<path fill="#c6c9bc" d="m122 52 17-11v44l-17 11z"/>
+<!-- Familiar long gray face and wide-set square eyes. -->
+<path fill="#a59f90" d="M90 64h28v30H90z"/>
+<path fill="#b8b1a0" d="M94 64h20v12H94z"/>
+<path fill="#fffef2" d="M88 66h12v9H88zM110 66h12v9h-12z"/>
+<path fill="#282720" d="M88 68h5v7h-5zM117 68h5v7h-5z"/>
+<path fill="#c79b94" d="M96 82h16v10H96z"/>
+<path fill="#aa7d77" d="M96 82h4v4h-4zM108 82h4v4h-4z"/>
+<path fill="#766e61" d="M100 92h8v3h-8z"/>
+</svg>

@@ -1,60 +1,85 @@
-# Stewart Family Minecraft Server website
+# Stewart Family Minecraft website — October 25 update
 
-Six static pages for `TDStewart/stewnet-website`. No build tools, installation, accounts, external fonts, or JavaScript frameworks are required. All internal paths are relative and work at the GitHub Pages project path `/stewnet-website/` as well as a domain root.
+Complete static website for TDStewart/stewnet-website, based on current GitHub commit b7cb7ed. No build tools or installation required.
 
-## Preview before uploading
+## What changed
 
-Open `index.html` in your browser. All page content and navigation work without JavaScript; JavaScript adds the address-copy button. Clipboard support depends on browser permissions and a secure context; if copying fails, the address is displayed for manual copying.
+- Getting Started keeps the complete numbered guide and adds an eight-topic jump list.
+- Connections, Commands & Features, and World Map use descriptive section headings, keeping existing instruction sequences, tables, and links intact. Old fragment IDs still work.
+- Previous/Next links follow the existing family-page order.
+- New Server Plugins & Updates page is in the main navigation on every page and linked in the footer. It contains all six manual and ten Starbase-managed entries supplied by Terry.
+- EssentialsX Core, Protect, and Spawn use the documented matching development-build workflow with official Jenkins artifacts and the explicit instruction not to use Starbase Reinstall for those components.
+- Geyser-Spigot and Floodgate use official Spigot/Paper downloads. Existing NetherNet signaling, ports, authentication settings, keys and configuration are preserved during routine update instructions.
+- Lodeway instructions replace only the plugin JAR and preserve the existing hosted map, dashboard, association and domain.
+- Managed entries link to official project pages for notes and compatibility. They normally use BisectHosting Starbase; manual replacement is explained only as a fallback when no compatible managed update is available.
+- Development-build and GitHub Actions artifact download steps are included. No installed plugin release numbers are shown.
+- The current full guide uses 15 homes to match your existing GitHub Commands and FAQ changes. The downloadable October 19 guide remains an untouched historical archive.
+- The Minecraft artwork, colors, family navigation order and exact private-family footer remain. The article backdrop is slightly darker for text readability; the logo home link now has an accessible name.
 
-## Upload files (does not configure publishing)
+## Upload to the existing repository
 
-1. Extract the downloaded ZIP.
-2. Open https://github.com/TDStewart/stewnet-website and select the `main` branch.
-3. Choose **Add file → Upload files**.
-4. Upload the **contents** of the extracted folder, so `index.html` is at the repository root, alongside `README.md`, the five other pages, `guide-original.md`, `.nojekyll`, and the `assets` folder. Do not upload the ZIP or put everything inside another `stewnet-website` folder. If hidden files are omitted by your file picker, `.nojekyll` can be added separately; the ordinary static files also work without Jekyll processing.
-5. Commit the upload. If Pages is already enabled for this branch, committing can automatically publish the changes. Check **Settings → Pages** before committing if you want to keep this staged only.
+1. Extract the ZIP.
+2. Open https://github.com/TDStewart/stewnet-website and select main.
+3. Choose Add file → Upload files.
+4. Upload the contents of the extracted folder, with index.html and plugin-updates.html at the repository root and the assets folder beside them. Do not upload the ZIP or enclose the site inside another folder.
+5. Commit the files with a message such as “Improve guide headings and add plugin update reference”. This can automatically publish because the existing Pages branch is configured for deployment.
+6. After deployment completes, open https://stewnet.com and refresh with Ctrl+Shift+R. Check the Plugin Updates navigation link.
 
-## Publish only when you are ready
+Keep the existing CNAME file containing stewnet.com. The full ZIP preserves its exact current contents. No domain, DNS, live Minecraft server file, server setting, repository, or publication change was performed while preparing this update.
 
-1. In the repository, open **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Choose branch **main**, folder **/ (root)**, then **Save**.
-4. Wait for the Pages deployment to finish. Use the URL GitHub displays. For the usual project configuration this is https://tdstewart.github.io/stewnet-website/.
-5. Check all six navigation links and the map link on a phone and computer.
+An optional update-only ZIP contains just the changed HTML pages, assets/style.css and README.md. It leaves the domain file, original guide and existing images alone. Upload its contents to the same repository root if you use it instead of the full package.
 
-GitHub's instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+## Validation
 
-No CNAME file is included. No DNS changes, custom-domain setup, repository writes, or publication were performed by the site builder. Existing custom-domain settings should be reviewed separately before publishing.
+- Seven pages: local file links, fragment anchors, seven-item header navigation, active page labels, exact family footer, and one main heading each checked.
+- Main guide: eight numbered topics and an eight-link roadmap checked. Original guide wording retained with the confirmed 15-home change and command typo/format correction.
+- Separate guides: instruction list counts, table rows and original external links checked against the current GitHub content.
+- Six manual and ten Starbase-managed plugin entries checked against Terry’s supplied inventory.
+- All 23 official project and documentation links on the plugin page returned HTTP 200 and matching page titles. Download builds are selected at maintenance time; no plugin binary was installed or executed.
+- Administrator page checked in desktop and mobile browser layouts; mobile jump navigation reached the correct heading and no horizontal overflow was observed.
+- Original Markdown guide and CNAME retained byte-for-byte from GitHub; all artwork files are unchanged.
 
-The Minecraft server's whitelist controls who can play. The wording “private” on this static website does not add website access control. A normal public GitHub Pages site and public repository are visible to anyone. The package contains no family player list, private contact details, or credentials.
+## Maintaining the page
 
-## Content authority
+Open plugin-updates.html to edit administrator instructions. Update assets/style.css for shared appearance. All content is present in HTML without requiring JavaScript. assets/site.js only enhances the server address copy buttons.
 
-The source is Terry's October 19, 2026 email version of “Stewart Family Minecraft Server — Getting Started Guide” pasted into the ChatGPT conversation **Minecraft Backpack Plugins**, conversation ID `6ad4e5ce-64c4-83e9-a899-8cf34f897ca9`, message ID `eda12557-b2ab-4c9e-aaa5-05e05d8e28b8`.
+The per-plugin management assignments come from Terry’s supplied list. Backpack specifically uses https://modrinth.com/plugin/backpackpl; version/loader filters from the supplied link were omitted to avoid a permanently pinned release. WIT links to the server plugin “What is That?”; VaultUnlocked may appear as Vault in logs.
 
-`guide-original.md` preserves that supplied text, including original typos and conditional wording. The full guide is rendered on `getting-started.html`; relevant sections are repeated on the Connect, Commands & features, and World map pages. The whitelist notice incorporates Terry's subsequent correction: players must give him their player name before connecting so he can whitelist them. FAQ answers and homepage summaries derive from the same guide. No server version, live status, extra commands, permissions, limits, or plugins have been invented.
+## Suggested next improvements
 
-The source says both “to return to peaceful mode, /peaceful” and that `/peaceful` toggles modes. Both original statements remain in the full guide. The FAQ also gives the explicit `/peaceful peaceful` command already supplied in its command table.
+- Put repeated commands and limits in one editable source and generate the static pages, so future changes cannot leave inconsistent copies.
+- Add a device chooser to Connections, keeping the existing instructions beneath it.
+- Keep last-reviewed dates on administrator and connection documentation; avoid fixed plugin releases.
 
-Console DNS addresses and compatible featured-server names were checked against https://github.com/Pugmatt/BedrockConnect on October 20, 2026. They match the supplied guide. The guide's third-party service caveat, troubleshooting link, and Automatic DNS restore instruction are retained. Minecraft server and map availability were not asserted or tested.
+These are future suggestions. The full numbered guide and working family instructions have not been replaced or shortened.
 
-Visual revision: the user subsequently supplied “Stewart Family Minecraft Server Guide.png”, the original design reference. The homepage now follows its cinematic forest banner, grass-and-stone title, private-family panel, four shortcuts, and Java/Bedrock/map cards. Shared pages use textured stone/dirt panels and grass edging. The six requested pages are retained. The illustrated scenery is decorative and is not a screenshot of the actual server or live map. No tracking or analytics is included.
+## Privacy and access
 
-## Editing
+The Minecraft whitelist controls who may play. This public static website does not authenticate administrators; the plugin page is documentation only. It contains no panel credentials, key material, private dashboard links, or server configuration secrets.
 
-- `assets/style.css`: shared appearance and responsive/print layouts.
-- `assets/site.js`: copy-address enhancement.
-- `assets/creeper.svg`, `assets/sheep.svg`: local illustrations.
-- Six `.html` files: complete standalone page content, navigation, and the exact shared footer.
+## Official sources
 
-Keep repeated guide sections and the shared navigation/footer in sync when editing. Preserve conditional claims such as “if enabled,” “once enabled,” and “should.”
-
-## Banner artwork
-
-`assets/family-hero.webp` was created with the built-in image-generation tool using the user-supplied mockup as its reference, then encoded as WebP for the website. The unused standalone SVG sheep remains available in assets, but the homepage now uses the sheep in the banner.
-
-Generation prompt:
-
-> Use case: precise-object-edit. Create a wide website hero banner adapted from the provided reference. Preserve the reference's exact Minecraft voxel forest at dusk, warm lanterns, lake and house scenery, green Creeper at left and recognizable cubic white Minecraft sheep at right. Preserve the central two-line block title exactly: 'STEWART FAMILY' in grass-over-dirt 3D block letters and 'MINECRAFT SERVER' in pale stone 3D block letters. Below the title keep the small tagline 'BUILD • EXPLORE • SURVIVE • TOGETHER'. Remove ALL navigation bars, panels, cards, address boxes, UI buttons, private-server notice and lower website interface. This output is just a cinematic landscape hero artwork with the title and characters, to be placed above real HTML content. Frame the complete title and both characters without clipping, leave modest breathing room; wide landscape composition approximately 3:1. No other text. Match reference faithfully, not a redesign.
-
-Revision validation: all internal files, anchors, navigation links, and exact shared footers passed checks. Full rendered guide wording matches the original after removing Markdown formatting. Banner artwork was visually inspected. A browser preview of this revision could not be run because local server sockets are restricted in this session; responsive CSS is provided but this revision has not been visually checked in a browser.
+Project links and documentation were reviewed October 25, 2026. The plugin page links to the relevant official sources beside each entry. Additional checked URLs:
+- https://ci.ender.zone/job/EssentialsX/
+- https://docs.papermc.io/paper/updating/
+- https://essentialsx.net/downloads
+- https://geysermc.org/download/
+- https://geysermc.org/wiki/floodgate/setup/
+- https://geysermc.org/wiki/geyser/setup/
+- https://github.com/JXYZP-G/SortersSatchel/actions
+- https://github.com/JXYZP-G/SortersSatchel/releases
+- https://hangar.papermc.io/Myztic_dev/NoChatPopup/
+- https://help.bisecthosting.com/hc/en-us/articles/40278552646299-How-to-Use-the-Plugins-Manager-on-a-Minecraft-Server
+- https://help.bisecthosting.com/hc/en-us/articles/40526000363163-How-to-Install-Craftbukkit-and-Spigot-Plugins-on-a-Minecraft-Server
+- https://modrinth.com/plugin/backpackpl
+- https://modrinth.com/plugin/luckperms
+- https://modrinth.com/plugin/neatsort
+- https://modrinth.com/plugin/peaceful-players
+- https://modrinth.com/plugin/scythe
+- https://modrinth.com/plugin/sorters-satchel
+- https://modrinth.com/plugin/timberella
+- https://modrinth.com/plugin/vaultunlocked
+- https://modrinth.com/plugin/what-is-that
+- https://www.lodeway.app/
+- https://www.lodeway.app/docs/getting-started
+- https://www.lodeway.app/docs/troubleshooting
